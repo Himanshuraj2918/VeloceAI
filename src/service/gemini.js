@@ -1,22 +1,16 @@
-// Make sure to include these imports:
-// import dotenv from 'dotenv';
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import dotenv from 'dotenv';
-dotenv.config({ path: '../../.env' });
-
-const apiKey =  process.env.VITE_API_KEY;
 
 
-const genAI = new GoogleGenerativeAI(process.env.VITE_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const apiKey = import.meta.env.VITE_API_KEY;
 
-const prompt = "Generate a javaScript code to fetch the data from the API";
-
-
-const generate = async()=>{
+const genAI = new GoogleGenerativeAI(apiKey);
+export const generateResponse = async(prompt)=>{
 try {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
         const result = await model.generateContent(prompt);
-        console.log(result.response.text());
+        const response = await result.response;
+        return response.text();
 } catch (error) {
     console.error(error);
     
@@ -24,4 +18,3 @@ try {
 }
 
 
-generate()
