@@ -13,7 +13,6 @@ const Home = () => {
     try {
       setIsLoading(true);
       const result = await generateResponse(prompt);
-      console.log(result);
       setResponse(result);
     } catch (error) {
       console.error('Error:', error);
@@ -24,7 +23,7 @@ const Home = () => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && e.ctrlKey) {
+    if (e.key === 'Enter') {
       handleGenerate();
     }
   };
@@ -49,7 +48,7 @@ const Home = () => {
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={handleKeyPress}
-              placeholder="Enter your prompt here... (Ctrl + Enter to generate)"
+              placeholder="Enter your prompt here..."
               rows={4}
               className="w-full px-4 py-3 rounded-lg bg-gray-800 
                 text-gray-100 placeholder-gray-400
@@ -64,7 +63,7 @@ const Home = () => {
               {/* Generate Button with Paper Plane Icon */}
               <button
                 onClick={handleGenerate}
-                disabled={isLoading}
+                disabled={isLoading || !prompt.trim()}
                 className="px-6 py-3 rounded-md font-semibold
                   bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500
                   text-white
