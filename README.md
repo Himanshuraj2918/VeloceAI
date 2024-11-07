@@ -72,5 +72,5 @@ npm run dev
 ---
 
 <div align="center">
-  Made with ❤️ by <a href="https://github.com/Himanshuraj2918">Himanshu Raj</a>
+  Made with ❤️ by <a href="https://github.com/Himanshuraj2918">Himanshuraj</a>
 </div>
