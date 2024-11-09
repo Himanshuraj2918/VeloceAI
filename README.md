@@ -8,10 +8,13 @@
 
 Veloce AI is a cutting-edge AI application powered by Google's Gemini model, offering text chat and image generation capabilities. For text interactions, it provides fast, accurate, and context-aware responses with advanced language understanding. The image generation feature allows users to create unique, AI-generated images from text descriptions, making it a versatile tool for both creative and practical applications. All of this is wrapped in a beautiful, modern user interface with seamless switching between text and image modes.
 
+---
+   ### 1. Text model
 <div align="center">
   <img src="https://github.com/Himanshuraj2918/VeloceAI/blob/main/src/assets/output/veloceAi-2.png" alt="Veloce AI Text Interface" width="800"/>
 </div>
 
+  ### 2. Image model
 <div align="center">
   <img src="https://github.com/Himanshuraj2918/VeloceAI/blob/main/src/assets/output/veloceAi-3.png" alt="Veloce AI Image Generation" width="800" class="mt-4"/>
 </div>
@@ -69,5 +72,5 @@ npm run dev
 ---
 
 <div align="center">
-  Made with ❤️ by <a href="https://github.com/Himanshuraj2918">Himanshu Raj</a>
+  Made with ❤️ by <a href="https://github.com/Himanshuraj2918">Himanshuraj</a>
 </div>
